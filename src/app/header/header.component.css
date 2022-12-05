@@ -1,0 +1,15 @@
+#header {
+    grid-column: span 3;
+    height: 200px;
+    background-color: dodgerblue;
+    /* background-repeat:repeat;
+    background-size: 30%; */
+    text-align:center;
+}
+
+/* custom H1 tag */
+#customH1{
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif ;
+    
+}
