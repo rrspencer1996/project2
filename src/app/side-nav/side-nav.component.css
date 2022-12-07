@@ -1,0 +1,29 @@
+/* #side-nav {
+    background-color: darksalmon;
+    text-align: center;
+    padding: 15em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10em;
+} */
+
+aside {
+    grid-row: span 1;
+    background-color: rgb(87, 111, 199);
+border-radius: 15px;
+    margin: 12px 0px;
+    padding: 16px;
+    color: white;
+    padding-top: 5px;
+    float: left;
+   
+}
+
+aside h3 {
+    margin: 0px;
+    font-size: 22px;
+}
+
+aside ul {
+    padding-left: 20px;
+    font-size: 14px;
+}

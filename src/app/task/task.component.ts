@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 export class TaskComponent {
 
 
-  @Input task: any;
+  @Input() task: any;
 
 }

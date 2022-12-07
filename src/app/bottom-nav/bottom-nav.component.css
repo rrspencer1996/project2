@@ -1,9 +1,13 @@
-#nav-bar{
+nav{
     display: flex;
     grid-column: span 3;
     background-color: rgb(211, 208, 67);
     justify-content: center;
+    text-align: center;
     font-style: italic;
+    margin-top: 10px;
+    border-radius: 15em;
+
     
 }
 
@@ -14,6 +18,8 @@ nav a {
     color: rgb(133, 16, 16);
     text-decoration: none;
     padding: 10px 32px;
+    text-align: center;
+    
 }
 
 nav a:hover {

@@ -2,9 +2,9 @@ footer {
     margin-top: 500px;
     display: flex;
     grid-column: span 16;
-    background-color: rgb(32, 34, 153);
+    background-color: rgb(87, 111, 199);
     justify-content: center;
-    font-style: italic;
+    border-radius: 15em;
     
 }
 
@@ -12,7 +12,7 @@ footer {
     display: inline-block;
     font-size: 20px;
     font-style: italic;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 10px 32px;
 }
