@@ -21,9 +21,11 @@ border-radius: 15px;
 aside h3 {
     margin: 0px;
     font-size: 22px;
+    text-align: justify;
 }
 
 aside ul {
     padding-left: 20px;
     font-size: 14px;
+    text-align: justify;
 }
