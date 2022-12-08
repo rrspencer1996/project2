@@ -1,5 +1,17 @@
+main {
+    padding: 24px;
+}
 section {
-    margin-left: 15px;
-    padding-left: 15px;
+    text-align: justify;
+    padding-left: 40px;
+    margin-inline: 15px ;
+}
+h4{
+    margin-bottom: .5em;
+    margin-left: 20px;
     
+}
+
+p {
+    margin-bottom: 1em;
 }

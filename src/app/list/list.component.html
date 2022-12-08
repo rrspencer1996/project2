@@ -1,10 +1,80 @@
 <main>
-<section>
-    <h3>coming soon, features a table listing elements of the form</h3>
-</section>
+    <!-- <app-output-test (eventToSend)="updateString($event)"></app-output-test> -->
+    <!-- <form>
+<div>
+    <label for="priority">Priority: </label>
+    <input [(ngModel)]="priority" id="priority" name="priority" type="text" placeholder="enter priority">
+</div>
+
+<div>
+    <label for="priority">owner: </label>
+    <input [(ngModel)]="owner" id="owner" name="owner" type="text" placeholder="enter owner">
+</div>
+
+<div>
+    <label for="priority">dueDate: </label>
+    <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="enter dueDate">
+</div>
     <ng-container *ngFor="let task of list">
-        <app-task [task]="task" ></app-task>
+        <app-task [task]="task" (updatePriorityEvent)="updatePriority($event)"></app-task>
         </ng-container>
 
+    </form> -->
 
+<table>
+    <thead>
+        <tr>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Due Date</th>
+        <th>Owner Name</th>
+        <th>Priority</th>
+        <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+        <!-- <ng-container *ngFor="let task of list"> -->
+    <tr>
+        <!-- <td>{{task.priority}}</td> -->
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+    </tr>
+    <tr>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+        <td>placeholder</td>
+    </tr>
+<!-- </ng-container> -->
+</table>
 </main>

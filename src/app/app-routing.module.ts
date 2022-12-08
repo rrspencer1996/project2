@@ -19,12 +19,12 @@ component: HomeComponent
   },
   {
     path: 'list',
-    component: ListComponent
-  },
-  {
-    path: 'task',
-    component: TaskComponent
-  }
+component:ListComponent
+},
+{
+  path: 'task',
+  component:TaskComponent
+}
 ];
 
 @NgModule({

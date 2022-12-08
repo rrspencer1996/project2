@@ -1,0 +1,12 @@
+main {
+    padding: 24px;
+}
+table {
+    margin: 20px;
+    padding: 15px;
+    border: solid 1px black;
+    border-radius: 15px;
+    float: right;
+    background-color: rgb(111, 202, 238);
+ 
+}

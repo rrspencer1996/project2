@@ -25,6 +25,13 @@ export class ListComponent {
         owner: 'Rob',
         dueDate: 'Tuesday'
     }
+
+    //create a funtion that listens for fires from the emitter for LISTS
+    // stringToDisplay:  string = '';
+    // updateString(newString: string): void{
+    // this.stringToDisplay = newString;
+    //}
     ];
+    //updatePriority()
   }
 
