@@ -25,6 +25,7 @@ component:ListComponent
   path: 'task',
   component:TaskComponent
 }
+
 ];
 
 @NgModule({

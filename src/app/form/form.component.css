@@ -1,6 +1,23 @@
 main{
     padding: 24px;
 }
-article {
+div {
     padding: 24px;
+    text-align: right;
+    margin-inline-end: 50px;
+    padding-right: 15em;
+}
+H4 {
+    text-align: center;
+}
+.formField {
+    display: inline-block;
+    padding: 6px;
+    margin-bottom: 1em;
+    width: 200px;
+}
+
+.invalid {
+color: red;
+margin-bottom: 0px 0px 12px 24px;
 }

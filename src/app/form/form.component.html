@@ -1,13 +1,64 @@
 <section>
-<form>
+<form [formGroup="registrationFormForm"] class="registrationFormForm">
 
-    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum corporis dolorem possimus atque dolor, sequi facere ipsam quae, at voluptates nihil quia amet quod in reprehenderit, mollitia dolorum maiores eligendi.</h4>
-    <div>
+    <h4>Descriptive Text here:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum corporis dolorem possimus atque dolor, sequi facere ipsam quae, at voluptates nihil quia amet quod in reprehenderit, mollitia dolorum maiores eligendi.</h4>
+
         <H3>COMING SOON</H3>
         <!-- BROKEN NEED TO FIX -->
         <!-- <label for="task priority">task priority</label>
             <input [(ngModel)]="newTask.priority"> -->
+        <div>
+        <label for="FirstName">First Name</label>
+        <input type="text" class="formLabel" name="firstName" id="firstName" placeholder="Please enter First Name">
+    <p class="invalid" *ngIf="firstName!.invalid && (firstName!.touched || firstName!.dirty)">
+        <span *ngIf ="firstName!.errors?.['required']">Input is required</span>
+        <span *ngIf ="firstName!.errors?.['minlength'] || firstName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
+    </p>
+    </div>    
+    <div>
+        <label for="LastName">Last Name</label>
+        <input type="text" class="formLabel" name="lastName" id="lastName" placeholder="Please enter Last Name">
+        <p class="invalid" *ngIf="lastName!.invalid && (lastName!.touched || lastName!.dirty)">
+            <span *ngIf ="lastName!.errors?.['required']">Input is required</span>
+            <span *ngIf ="lastName!.errors?.['minlength'] || lastName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
+        </p>
+    </div>  
+    <div>
+        <label for="email">Email</label>
+        <input type="text" class="formLabel" name="email" id="email" placeholder="Please enter email">
+    </div>    
+    <div>
+        <label for="placeholder">Task Title:</label>
+    <input type="text" id="name" name="name">
     </div>
-    <button>Enter</button>
+    <div>
+        <label for="placeholder">Task Priority:</label>
+    <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="placeholder">Task Due Date:</label>
+    <input type="text" id="name" name="name">
+    </div>
+    <div>
+        <label for="placeholder">Owner Name:</label>
+    <input type="text" id="name" name="name">
+    <!-- <button>Enter</button> -->
+    </div>
+    <div>
+        <label for="placeholder">Impact:</label>
+    <input type="text" id="name" name="name">
+    <!-- <button>Enter</button> -->
+    </div>
+    <div>
+        <label for="placeholder">Comment:</label>
+    <input type="text" id="name" name="name">
+    <br><br><br><button type="submit" (click)="onSubmit()" [disabled]="registrationFormForm.invalid" class="submitButton">REGISTER</button>
+    </div>
+
+    <div>
+        <h3>Data from Form</h3>
+        <p>First name:  {{</p>
+    </div>
+
 </form>
 </section>
