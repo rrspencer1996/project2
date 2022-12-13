@@ -1,5 +1,5 @@
 <section>
-<form [formGroup="registrationFormForm"] class="registrationFormForm">
+<form [formGroup]="registrationFormForm" class="registrationForm">
 
     <h4>Descriptive Text here:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum corporis dolorem possimus atque dolor, sequi facere ipsam quae, at voluptates nihil quia amet quod in reprehenderit, mollitia dolorum maiores eligendi.</h4>
 
@@ -9,7 +9,7 @@
             <input [(ngModel)]="newTask.priority"> -->
         <div>
         <label for="FirstName">First Name</label>
-        <input type="text" class="formLabel" name="firstName" id="firstName" placeholder="Please enter First Name">
+        <input type="text" formControlName="firstName" class="formLabel" name="firstName" id="firstName" placeholder="Please enter First Name">
     <p class="invalid" *ngIf="firstName!.invalid && (firstName!.touched || firstName!.dirty)">
         <span *ngIf ="firstName!.errors?.['required']">Input is required</span>
         <span *ngIf ="firstName!.errors?.['minlength'] || firstName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
@@ -17,47 +17,55 @@
     </div>    
     <div>
         <label for="LastName">Last Name</label>
-        <input type="text" class="formLabel" name="lastName" id="lastName" placeholder="Please enter Last Name">
+        <input type="text" class="formLabel" formControlName="lastName" name="lastName" id="lastName" placeholder="Please enter Last Name">
         <p class="invalid" *ngIf="lastName!.invalid && (lastName!.touched || lastName!.dirty)">
             <span *ngIf ="lastName!.errors?.['required']">Input is required</span>
             <span *ngIf ="lastName!.errors?.['minlength'] || lastName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
         </p>
     </div>  
     <div>
-        <label for="email">Email</label>
-        <input type="text" class="formLabel" name="email" id="email" placeholder="Please enter email">
+        <label for="TaskTitle">Task Title</label>
+        <input type="text" formControlName="taskTitle" class="formLabel" name="taskTitle" id="taskTitle" placeholder="Please enter name of task">
+    <p class="invalid" *ngIf="taskTitle!.invalid && (taskTitle!.touched || taskTitle!.dirty)">
+        <span *ngIf ="taskTitle!.errors?.['required']">Input is required</span>
+        <span *ngIf ="taskTitle!.errors?.['minlength'] || taskTitle!.errors?.['maxlength']">Title must be between 3 and 20 characters</span>
     </div>    
     <div>
-        <label for="placeholder">Task Title:</label>
-    <input type="text" id="name" name="name">
+        <label for="Email">Email</label>
+        <input type="text" formControlName="email" class="formLabel" name="email" id="email" placeholder="Please enter email address">
+    <p class="invalid" *ngIf="email!.invalid && (email!.touched || email!.dirty)">
+        <!-- <span *ngIf ="email.errors?.['required']">Input is required</span> -->
+        <span *ngIf ="email!.errors?.['minlength'] || email!.errors?.['maxlength']">Title must be between 3 and 20 characters</span>
+    </div>    
+    <div>
+        <label for="taskPriority">Task Priority</label>
+        <input type="text" formControlName="taskPriority" class="formLabel" name="taskPriority" id="taskPriority" placeholder="Please enter priority of task">
+    <p class="invalid" *ngIf="taskPriority!.invalid && (taskPriority!.touched || taskPriority!.dirty)">
+        <span *ngIf ="taskPriority!.errors?.['required']">Input is required</span>
+        <span *ngIf ="taskPriority!.errors?.['minlength'] || taskPriority!.errors?.['maxlength']">Title must be between 3 and 20 characters</span>
     </div>
     <div>
-        <label for="placeholder">Task Priority:</label>
-    <input type="text" id="name" name="name">
+        <label for="dueDate">Task Due Date</label>
+        <input type="text" formControlName="dueDate" class="formLabel" name="dueDate" id="dueDate" placeholder="Please enter priority of task">
+    <p class="invalid" *ngIf="dueDate!.invalid && (dueDate!.touched || dueDate!.dirty)">
+        <span *ngIf ="dueDate!.errors?.['required']">Input is required</span>
+        <span *ngIf ="dueDate!.errors?.['minlength'] || dueDate!.errors?.['maxlength']">Title must be between 3 and 20 characters</span>
     </div>
     <div>
-        <label for="placeholder">Task Due Date:</label>
-    <input type="text" id="name" name="name">
+        <label for="todo">To Do</label>
+        <input type="text" formControlName="todo" class="formLabel" name="todo" id="todo" placeholder="Add task to todo">
+    <p class="invalid" *ngIf="todo!.invalid && (todo!.touched || todo!.dirty)">
+        <span *ngIf ="todo!.errors?.['required']">Input is required</span>
+        <span *ngIf ="todo!.errors?.['minlength'] || todo!.errors?.['maxlength']">Title must be between 3 and 20 characters</span>
     </div>
+        <br><br><br><button type="submit" (click)="onSubmit()" [disabled]="registrationFormForm.invalid" class="submitButton">REGISTER</button>
     <div>
-        <label for="placeholder">Owner Name:</label>
-    <input type="text" id="name" name="name">
-    <!-- <button>Enter</button> -->
-    </div>
-    <div>
-        <label for="placeholder">Impact:</label>
-    <input type="text" id="name" name="name">
-    <!-- <button>Enter</button> -->
-    </div>
-    <div>
-        <label for="placeholder">Comment:</label>
-    <input type="text" id="name" name="name">
-    <br><br><br><button type="submit" (click)="onSubmit()" [disabled]="registrationFormForm.invalid" class="submitButton">REGISTER</button>
-    </div>
-
-    <div>
-        <h3>Data from Form</h3>
-        <p>First name:  {{</p>
+        <h3>Data From Form</h3>
+        <p>First Name: {{ regformTest.firstName }}</p>
+        <p>Last Name: {{ regformTest.lastName }}</p>
+        <p>E-Mail: {{ regformTest.email }}</p>
+        <p>Password: {{ regformTest.taskTitle }}</p>
+        <p>Confirm Password: {{ regformTest.taskPriority}}</p>
     </div>
 
 </form>

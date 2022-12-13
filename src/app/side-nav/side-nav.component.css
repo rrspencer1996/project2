@@ -9,7 +9,7 @@
 aside {
     grid-row: span 1;
     background-color: rgb(87, 111, 199);
-border-radius: 15px;
+    border-radius: 15px;
     margin: 12px 0px;
     padding: 16px;
     color: white;
@@ -21,11 +21,9 @@ border-radius: 15px;
 aside h3 {
     margin: 0px;
     font-size: 22px;
-    text-align: justify;
 }
 
 aside ul {
     padding-left: 20px;
     font-size: 14px;
-    text-align: justify;
 }
