@@ -1,3 +1,20 @@
-main {
-    padding: 24px;
+.div {
+    
+    padding: 12px, 24px;
+    background-color: lightsalmon;
+    max-width: 1000px;
+    align-content:flex-end;
+    border-radius: 8px;
+    padding: 20px 20px 20px 40px;
+    width: 600px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 240px;
+    border: solid 1px black;
+    float: left;
+    
+}
+.table {
+    padding: 12px, 24px;
+   
 }
