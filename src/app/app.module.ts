@@ -12,7 +12,6 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
-import { CardComponent } from './card/card.component';
 import { MastheadComponent } from './masthead/masthead.component';
 
 
@@ -29,7 +28,6 @@ import { MastheadComponent } from './masthead/masthead.component';
     FormComponent,
     ListComponent,
     TaskComponent,
-    CardComponent,
     MastheadComponent,
 
  
