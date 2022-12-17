@@ -1,4 +1,24 @@
+<main>
+<ng-container *ngFor="let tasker of TaskerList">
+<app-tasker [tasker]="tasker"></app-tasker>
+</ng-container>
 
+<button (click)="addTask('John', 'Wick', 'kill things', 'jwick@kill.com', 'Low', 'Tomarrow', 'Yes')">Wickify</button>
+    <br><br><br><br>
+
+<ng-container *ngIf="false">
+
+    <app-tasker [tasker]= "TaskerTwo"> </app-tasker>
+
+<section id="section">
+    <h3>test</h3>
+    <h3>{{lastName}}</h3>
+    <h3>{{taskTitle}}</h3>
+    <h3>{{email}}</h3>
+    <h3>{{taskPriority}}</h3>
+    <h3>{{dueDate}}</h3>
+    <h3>{{toDo}}</h3>
+</section>
     <!-- <ul>
         <li>{{ task.priority }}</li>
         <li>{{ task.owner }}</li>
@@ -6,4 +26,5 @@
     </ul> -->
     <!-- <label for="newPriority">New Priority</label>
     <input [(ngModel)]="newPriority" type="text" id="newPriority" name="newPriority" placeholder="Update Priority"> -->
-
+</ng-container>
+</main>

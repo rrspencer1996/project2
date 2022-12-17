@@ -6,7 +6,76 @@ import { Component, EventEmitter, Input, Output, OnChanges, OnInit, SimpleChange
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit, OnChanges {
+  firstName: string = '';
+  lastName: string ='';
+  taskTitle: string ='';
+  email: string ='';
+  taskPriority: string = '';
+  dueDate: string = '';
+  toDo: string = '';
 
+
+TaskerOne: any = {
+  firstName: 'Rob',
+  lastName: 'Spencer',
+  taskTitle: 'empty trash',
+  email: 'rrspencer@live.com',
+  taskPriority: 'High',
+  dueDate: 'Today',
+  toDo: 'Yes'
+}
+
+TaskerTwo: any = {
+firstName: 'Joe',
+lastName: 'Jackson',
+taskTitle: 'do dishes',
+email: 'abc123@email.com',
+taskPriority: 'Low',
+dueDate: 'Friday',
+toDo: 'Yes'
+}
+
+ TaskerThree: any = {
+  firstName: 'Warren',
+  lastName: 'Buffet',
+  taskTitle: 'Make Money',
+  email: 'gimmedalootz@money.com',
+  taskPriority: 'Urgent',
+  dueDate: 'ASAP',
+  toDo: 'Yes'
+}
+
+TaskerList: any = [
+{
+  firstName: 'Rob1',
+  lastName: 'Spencer',
+  taskTitle: 'empty trash',
+  email: 'rrspencer@live.com',
+  taskPriority: 'High',
+  dueDate: 'Today',
+  toDo: 'Yes'
+},
+
+{
+firstName: 'Joe1',
+lastName: 'Jackson',
+taskTitle: 'do dishes',
+email: 'abc123@email.com',
+taskPriority: 'Low',
+dueDate: 'Friday',
+toDo: 'Yes'
+},
+
+{
+  firstName: 'Warren1',
+  lastName: 'Buffet',
+  taskTitle: 'Make Money',
+  email: 'gimmedalootz@money.com',
+  taskPriority: 'Urgent',
+  dueDate: 'ASAP',
+  toDo: 'Yes'
+}
+];
 
   @Input() task: any;
 
@@ -49,6 +118,12 @@ updateTaskViaId(): void {
   this.updateTaskViaIdEvent.emit([this.newTaskViaId, this.task.id]);
 }
 
+changeName(newName: string): void {
+  this.firstName = newName;
+}
+addTask(firstName: string, lastName: string, taskTitle: string, email: string, taskPriority: string, dueDate: string, toDo: string): void {
+this.TaskerList.push({firstName: firstName, lastName: lastName, taskTitle: taskTitle, email: email, taskPriority: taskPriority, dueDate: dueDate, toDo: toDo})
+}
 }
 
 // create a button and field inside each card and use them to update a field inside the card, to accomplish this we have to send data to the list component

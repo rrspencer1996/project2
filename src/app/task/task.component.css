@@ -1,3 +1,7 @@
+* {
+    margin: 0px;
+}
+
 #section {
     background-color: rgb(111, 202, 238);
     border-radius: 8px;
@@ -7,9 +11,4 @@
     margin: 24px;
     border: solid 1px black;
     float: right;
-}
-
-section ul li:first-of-type {
-    font-weight: bold;
-    text-transform: uppercase;
 }

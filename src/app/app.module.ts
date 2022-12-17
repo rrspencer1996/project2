@@ -13,6 +13,7 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
 import { MastheadComponent } from './masthead/masthead.component';
+import { TaskerComponent } from './tasker/tasker.component';
 
 
 
@@ -29,6 +30,7 @@ import { MastheadComponent } from './masthead/masthead.component';
     ListComponent,
     TaskComponent,
     MastheadComponent,
+    TaskerComponent,
 
  
   ],
