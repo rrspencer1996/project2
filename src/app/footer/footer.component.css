@@ -1,6 +1,6 @@
 footer {
-    margin-top: 500px;
-    display: flex;
+    margin-top: 150em;
+    display:grid;
     grid-column: span 16;
     background-color: rgb(87, 111, 199);
     justify-content: center;

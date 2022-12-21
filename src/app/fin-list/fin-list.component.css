@@ -1,0 +1,23 @@
+#fsection {
+    background-color: rgb(92, 158, 112);
+    border-radius: 8px;
+    padding: 10px 10px 10px 20px;
+    width: 300px;
+    margin: 100px;
+    border: solid 1px black;
+    float: right;
+    text-align: left;
+    display: block;
+}
+
+#fsection ul li:first-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+div {
+    padding: 40px;
+    margin: 40px;
+    border: solid 1px black;
+    background-color: forestgreen;
+    border-radius: 8px;
+}

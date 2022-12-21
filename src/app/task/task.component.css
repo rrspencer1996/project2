@@ -1,14 +1,25 @@
-* {
-    margin: 0px;
+#tsection {
+    grid-row: span 2;
+    background-color: rgb(128, 168, 206);
+    border-radius: 8px;
+    padding: 0px;
+    width: 360px;
+    margin-bottom: 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+    border: solid 1px black;
+    margin-top: 3em;
+    text-align: left;
+    display:grid;
+    position: right;
+    
 }
 
-#section {
-    background-color: rgb(111, 202, 238);
-    border-radius: 8px;
-    padding: 20px 20px 20px 40px;
-    width: 500px;
-    height: 300px;
-    margin: 24px;
-    border: solid 1px black;
-    float: right;
+#tsection ul li:first-of-type {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div {
+    margin-top: 12px;
 }

@@ -1,3 +1,10 @@
+main {
+    padding: 24px;
+}
+
+th {
+ padding-right: 15px;
+}
 h2 {
     text-align: center;
 }

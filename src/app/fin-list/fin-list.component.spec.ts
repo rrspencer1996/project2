@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DivComponent } from './div.component';
+import { FinListComponent } from './fin-list.component';
 
-describe('DivComponent', () => {
-  let component: DivComponent;
-  let fixture: ComponentFixture<DivComponent>;
+describe('FinListComponent', () => {
+  let component: FinListComponent;
+  let fixture: ComponentFixture<FinListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DivComponent ]
+      declarations: [ FinListComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DivComponent);
+    fixture = TestBed.createComponent(FinListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

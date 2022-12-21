@@ -1,30 +1,31 @@
-<main>
+
+    <section id="tsection">
+        <ul>
+            <h3><strong>To Do!</strong></h3>
+           <h5>First Name: {{ task.firstName }}</h5>
+            <h5>Last Name:  {{ task.lastName }}</h5>
+            <h5>Task Title: {{ task.taskTitle }}</h5>
+            <h5>Email:   {{ task.email }}</h5>
+            <h5>Task Priority:   {{ task.taskPriority }}</h5>
+            <h5>Due Date:   {{ task.dueDate}}</h5>
+            <h5>To Do:  {{ task.toDo}}</h5>
+        </ul>
+        <div>
+        <label for="newTitle">New Title</label>
+        <input [(ngModel)]="newTitle" type="text" id="newTitle" name="newTitle" placeholder="Update Title">
+        <button (click)="updateTitle()">New Title</button>
+        </div>
+        <div>
+            <label for="newTaskViaId">New Title</label>
+            <input [(ngModel)]="newTaskViaId" type="text" id="newTaskViaId" name="newTaskViaId" placeholder="Update Task">
+            <button (click)="updateTaskViaId()">Udate task</button>
+            </div>
 <ng-container *ngFor="let tasker of TaskerList">
 <app-tasker [tasker]="tasker"></app-tasker>
 </ng-container>
+    </section>
 
-<button (click)="addTask('John', 'Wick', 'kill things', 'jwick@kill.com', 'Low', 'Tomarrow', 'Yes')">Wickify</button>
-    <br><br><br><br>
-
-<ng-container *ngIf="false">
-
-    <app-tasker [tasker]= "TaskerTwo"> </app-tasker>
-
-<section id="section">
-    <h3>test</h3>
-    <h3>{{lastName}}</h3>
-    <h3>{{taskTitle}}</h3>
-    <h3>{{email}}</h3>
-    <h3>{{taskPriority}}</h3>
-    <h3>{{dueDate}}</h3>
-    <h3>{{toDo}}</h3>
-</section>
-    <!-- <ul>
-        <li>{{ task.priority }}</li>
-        <li>{{ task.owner }}</li>
-        <li>{{ task.dueDate }}</li>
-    </ul> -->
-    <!-- <label for="newPriority">New Priority</label>
-    <input [(ngModel)]="newPriority" type="text" id="newPriority" name="newPriority" placeholder="Update Priority"> -->
-</ng-container>
-</main>
+<!-- <section *ngif= "task.taskPriority === 'Urgent'" style="background-color: firebrick;"></section>
+<section *ngif= "task.taskPriority === 'High'" style="background-color:orange;"></section>
+<section *ngif= "task.taskPriority === 'Routine'" style="background-color:lightseagreen"></section>
+<section *ngif= "task.taskPriority === 'Low'" style="background-color:lightskyblue"></section> -->

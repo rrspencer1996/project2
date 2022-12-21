@@ -4,6 +4,7 @@ import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
+import { FinListComponent } from './fin-list/fin-list.component';
 
 const routes: Routes = [
 {path: '',
@@ -23,6 +24,10 @@ component:ListComponent
 },
 {
   path: 'task',
+  component:TaskComponent
+},
+{
+  path: 'fin-list',
   component:TaskComponent
 }
 

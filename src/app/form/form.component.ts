@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Task } from '../Models/task';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +8,71 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+newTask: Task = new Task(0,'','','','','','','');
 
+task: any = [
+  {
+    id: 1,
+    firstName: 'Ricky',
+    lastName: 'Bobby',
+    email: 'shakeandbake@gmail.com',
+    taskTitle: 'Winning',
+    taskPriority: 'Urgent',
+    dueDate: 'Today',
+    todo: 'Yes',
+  },
+  {
+    id: 2,
+    firstName: 'john',
+    lastName: 'doe',
+    email: 'abc@def.com',
+    taskTitle: 'placing title here',
+    taskPriority: 'routine',
+    dueDate: 'Next Tuesday',
+    todo: 'No',
+  },
+  {
+    id: 3,
+    firstName: 'Jane',
+    lastName: 'Austin',
+    email: 'PrideandPred@hotmail.com',
+    taskTitle: 'Write a book',
+    taskPriority: 'Low',
+    dueDate: '1874',
+    todo: 'No',
+  },
+  {
+    id: 4,
+    firstName: 'DJ',
+    lastName: 'JazzyJeff',
+    email: 'FreshPrince@aol.com',
+    taskTitle: 'chillin',
+    taskPriority: 'low',
+    dueDate: 'Summertime',
+    todo: 'No',
+  },
+  {
+    id: 5,
+    firstName: 'Baconator',
+    lastName: 'Sandwich',
+    email: 'highcholestorol@nope.com',
+    taskTitle: 'Ending it quickly',
+    taskPriority: 'High',
+    dueDate: 'Tomarrow',
+    todo: 'No',
+  },
+  {
+    id: 6,
+    firstName: 'Duke',
+    lastName: 'Togo',
+    email: 'Golgo13@sniper.com',
+    taskTitle: ' Taking the shot',
+    taskPriority: 'Urgent',
+    dueDate: 'Today',
+    todo: 'Yes',
+  }
+
+]
 constructor(private fb: FormBuilder) {}
 
 registrationFormForm = this.fb.group(
@@ -56,7 +121,9 @@ regformTest: any = {
 }
 
 onSubmit(): void {
+  this.task.push({...this.newTask});
   this.regformTest = this.registrationFormForm.value;
+console.log(this.newTask + 'created')
 
 }
 

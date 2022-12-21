@@ -19,7 +19,7 @@ export class ListComponent {
 
     list: any = [
       {
-        id:1,
+        id: 1,
         firstName: 'Rob',
         lastName: 'Spencer',
         taskTitle: 'empty trash',
@@ -29,7 +29,7 @@ export class ListComponent {
         toDo: 'Yes'
     },
     {
-      id:2,
+      id: 2,
       firstName: 'Joe',
       lastName: 'Jackson',
       taskTitle: 'do dishes',
@@ -39,7 +39,7 @@ export class ListComponent {
       toDo: 'Yes'
   },
       {
-        id:3,
+        id: 3,
         firstName: 'Warren',
         lastName: 'Buffet',
         taskTitle: 'Make Money',
@@ -49,7 +49,7 @@ export class ListComponent {
         toDo: 'Yes'
     },
     {
-      id:4,
+      id: 4,
       firstName: 'UmyBoi',
       lastName: 'Blue',
       taskTitle: 'clean bathroom',
@@ -59,7 +59,7 @@ export class ListComponent {
       toDo: 'No'
     },
     {
-      id:5,
+      id: 5,
       firstName: 'The Dude',
       lastName: 'Lebowski',
       taskTitle: 'Abide',
@@ -69,7 +69,7 @@ export class ListComponent {
       toDo: 'No'
     },
     {
-      id:6,
+      id: 6,
       firstName: 'Peter',
       lastName: 'Parker',
       taskTitle: 'fight evil',
@@ -79,7 +79,7 @@ export class ListComponent {
       toDo: 'Yes'
     },
     {
-      id:7,
+      id: 7,
     firstName: 'Chadwick',
     lastName: 'Boseman',
     taskTitle: 'protect vibranium',
@@ -93,14 +93,33 @@ export class ListComponent {
 
 
 
-addtaskTitle(): void {
-  // adds the card to the deck array using the variable values from the .ts file
+addTask(): void {
   this.list.push(
       {
-        id: this.list.length + 1,
-        taskTitle: this.taskTitle,  // each one calls its corresponding variable
+        firstName: this.firstName,
+        lastName: this.lastName,
+        taskTitle: this.taskTitle,  
+        email: this.email,
         taskPriority: this.taskPriority,
-        dueDate: this.dueDate
+        dueDate: this.dueDate,
+        toDo: this.toDo
+      }
+  );
+}
+updateTitle(newTitle: string, index: number) {
+  this.list[index].taskTitle = newTitle
+}
+
+removeTask(): void {
+  this.list.pop(
+      {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        taskTitle: this.taskTitle,  
+        email: this.email,
+        taskPriority: this.taskPriority,
+        dueDate: this.dueDate,
+        toDo: this.toDo
       }
   );
 }
@@ -146,16 +165,20 @@ this.list.push(newTask);
   
 taskNumber: number = 0;
 newtaskPriority: string = '';
-  
-    // // function to change a card's symbol, finding it by id
+
+
+
 changetaskPriority() {
 for (let task of this.list) {
 if (task.id === this.taskNumber)
 task.taskPriority = this.newtaskPriority;
 }
 
-
-    // ];
-    //updatePriority()
   }
+updateTaskViaId(newTask: any): void{
+ for (let task of this.list) {
+  if (task.id === newTask[1])
+  task.taskTitle = newTask[0];
+ }
+}
 }

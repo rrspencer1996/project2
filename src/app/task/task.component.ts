@@ -15,76 +15,50 @@ export class TaskComponent implements OnInit, OnChanges {
   toDo: string = '';
 
 
-TaskerOne: any = {
-  firstName: 'Rob',
-  lastName: 'Spencer',
-  taskTitle: 'empty trash',
-  email: 'rrspencer@live.com',
-  taskPriority: 'High',
-  dueDate: 'Today',
-  toDo: 'Yes'
-}
-
-TaskerTwo: any = {
-firstName: 'Joe',
-lastName: 'Jackson',
-taskTitle: 'do dishes',
-email: 'abc123@email.com',
-taskPriority: 'Low',
-dueDate: 'Friday',
-toDo: 'Yes'
-}
-
- TaskerThree: any = {
-  firstName: 'Warren',
-  lastName: 'Buffet',
-  taskTitle: 'Make Money',
-  email: 'gimmedalootz@money.com',
-  taskPriority: 'Urgent',
-  dueDate: 'ASAP',
-  toDo: 'Yes'
-}
 
 TaskerList: any = [
-{
-  firstName: 'Rob1',
-  lastName: 'Spencer',
-  taskTitle: 'empty trash',
-  email: 'rrspencer@live.com',
-  taskPriority: 'High',
-  dueDate: 'Today',
-  toDo: 'Yes'
-},
-
-{
-firstName: 'Joe1',
-lastName: 'Jackson',
-taskTitle: 'do dishes',
-email: 'abc123@email.com',
-taskPriority: 'Low',
-dueDate: 'Friday',
-toDo: 'Yes'
-},
-
-{
-  firstName: 'Warren1',
-  lastName: 'Buffet',
-  taskTitle: 'Make Money',
-  email: 'gimmedalootz@money.com',
-  taskPriority: 'Urgent',
-  dueDate: 'ASAP',
-  toDo: 'Yes'
-}
+//   {
+//     firstName: 'Rob1',
+//     lastName: 'Spencer',
+//     taskTitle: 'empty trash',
+//     email: 'rrspencer@live.com',
+//     taskPriority: 'High',
+//     dueDate: 'Today',
+//     toDo: 'Yes'
+//   },
+  
+//   {
+//   firstName: 'Joe1',
+//   lastName: 'Jackson',
+//   taskTitle: 'do dishes',
+//   email: 'abc123@email.com',
+//   taskPriority: 'Low',
+//   dueDate: 'Friday',
+//   toDo: 'Yes'
+//   },
+  
+//   {
+//     firstName: 'Warren1',
+//     lastName: 'Buffet',
+//     taskTitle: 'Make Money',
+//     email: 'gimmedalootz@money.com',
+//     taskPriority: 'Urgent',
+//     dueDate: 'ASAP',
+//     toDo: 'Yes'
+//   }
 ];
+
 
   @Input() task: any;
 
   @Output() updateTaskPriorityEvent = new EventEmitter<string>();
   @Output() updateTaskViaIdEvent = new EventEmitter<any>();
-  
-  
-  newTaskPriority: string = '';
- newTaskViaId: string = '';
+  @Output() updateTaskTitleEvent = new EventEmitter<string>();
+
+newTask: string = '';  
+newTitle: string = '';
+newTaskPriority: string = '';
+newTaskViaId: string = '';
 // this.updatePriorityEvent
 //}
 ngOnInit() {
@@ -100,10 +74,10 @@ ngOnInit() {
       section!.style.backgroundColor = 'orange';
       break;
     case 'Routine':
-      section!.style.backgroundColor = 'lightgray';
+      section!.style.backgroundColor = 'lightgreen';
       break;
     case 'Low':
-      section!.style.backgroundColor = 'blue';
+      section!.style.backgroundColor = 'lightblue';
       break;  
 }
 }
@@ -118,11 +92,23 @@ updateTaskViaId(): void {
   this.updateTaskViaIdEvent.emit([this.newTaskViaId, this.task.id]);
 }
 
-changeName(newName: string): void {
+changeFName(newName: string): void {
   this.firstName = newName;
+}
+changeLName(newName: string): void {
+  this.lastName = newName;
 }
 addTask(firstName: string, lastName: string, taskTitle: string, email: string, taskPriority: string, dueDate: string, toDo: string): void {
 this.TaskerList.push({firstName: firstName, lastName: lastName, taskTitle: taskTitle, email: email, taskPriority: taskPriority, dueDate: dueDate, toDo: toDo})
+}
+removeTask(firstName: string, lastName: string, taskTitle: string, email: string, taskPriority: string, dueDate: string, toDo: string): void {
+  this.TaskerList.pop({firstName: firstName, lastName: lastName, taskTitle: taskTitle, email: email, taskPriority: taskPriority, dueDate: dueDate, toDo: toDo})
+  }
+updateTask(): void {
+  this.updateTaskViaIdEvent.emit(this.newTask)
+}
+updateTitle(): void {
+ this.updateTaskTitleEvent.emit(this.newTitle)
 }
 }
 

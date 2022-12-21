@@ -1,0 +1,18 @@
+
+    <section id=fsection>
+
+        <ul>
+            <h3><strong>Completed!</strong></h3>
+           <h5>First Name: {{ fin_List.firstName }}</h5>
+            <h5>Last Name:  {{ fin_List.lastName }}</h5>
+            <h5>Task Title: {{ fin_List.taskTitle }}</h5>
+            <h5>Email:   {{ fin_List.email }}</h5>
+            <h5>Task Priority:   {{ fin_List.taskPriority }}</h5>
+            <h5>Due Date:   {{ fin_List.dueDate}}</h5>
+            <h5>To Do:  {{ fin_List.toDo}}</h5>
+        </ul>
+        <ng-container *ngFor="let tasker of fin_List">
+            <app-tasker [tasker]="tasker"></app-tasker>
+            </ng-container>
+
+    </section>

@@ -1,19 +1,35 @@
-.div {
-    
-    background-color: lightsalmon;
+main{
+    padding: 10px;
+}
+
+#div {
     max-width: 1000px;
-    align-content:flex-end;
-    border-radius: 8px;
     padding: 40px;
     width: 800px;
-    height: 100px;
-    margin-top: 50px;
-    margin-left: 240px;
-    border: solid 1px black;
-    float: left;
-    
-}
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: block;
+    text-align: justify;
+} 
 .table {
     padding: 12px, 24px;
    
+}
+#taskCreationForm {
+    float: right;
+}
+aside {
+    position: right;
+    background-color: rgb(87, 111, 199);
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+    margin: 12px 0px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    padding-top: 5px;
+    float: left;
 }

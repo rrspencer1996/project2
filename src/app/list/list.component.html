@@ -1,79 +1,51 @@
 
-    <!-- <app-output-test (eventToSend)="updateString($event)"></app-output-test> -->
-    <!-- <form>
-<div>
-    <label for="priority">Priority: </label>
-    <input [(ngModel)]="priority" id="priority" name="priority" type="text" placeholder="enter priority">
-</div>
+<main>
+<form #taskCreationForm>
+<div id="div" >
 
-<div>
-    <label for="priority">owner: </label>
-    <input [(ngModel)]="owner" id="owner" name="owner" type="text" placeholder="enter owner">
-</div>
-
-<div>
-    <label for="priority">dueDate: </label>
-    <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="enter dueDate">
-</div>
-    <ng-container *ngFor="let task of list">
-        <app-task [task]="task" (updatePriorityEvent)="updatePriority($event)"></app-task>
-        </ng-container>
-
-    </form> -->
-
-<div class="div" >
-    <table class="table">
-        <thead>
-            <tr>
-                <div>
-                    <label for="firstName">F Name: </label>
-                    <input [(ngModel)]="firstName" id="firstName" name="firstName" type="text" placeholder="Enter First Name...">
-                    <label for="lastName">Last Name: </label>
-                    <input [(ngModel)]="lastName" id="lastName" name="lastName" type="text" placeholder="Enter Last Name...">
-                    <label for="taskTitle">Task Title: </label>
-                    <input [(ngModel)]="taskTitle" id="taskTitle" name="taskTitle" type="text" placeholder="Enter Task Title...">
-                </div>
-                <div>
-                    <label for="email">Email: </label>
-                    <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Enter email address...">
-                    <label for="taskPriority">Task Priority: </label>
-                    <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
-                    <label for="dueDate">Due Date: </label>
-                    <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
-                    </div>  
-                <div>
-                    <label for="toDo">To Do: </label>
-                    <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Yes or No...">
-                </div>
-                <div>
+<article>
+    <section>
+        <div>
+            <label for="firstName">F Name: </label>
+            <input [(ngModel)]="firstName" id="firstName" name="firstName" type="text" placeholder="Enter First Name...">
+            <label for="lastName">Last Name: </label>
+            <input [(ngModel)]="lastName" id="lastName" name="lastName" type="text" placeholder="Enter Last Name...">
+            <label for="taskTitle">Task Title: </label>
+            <input [(ngModel)]="taskTitle" id="taskTitle" name="taskTitle" type="text" placeholder="Enter Task Title...">
         </div>
-            </tr>
-        </thead>
-    </table>
-<table class="table">
-    <thead>
-        <tr>
-        <th>F. Name</th>
-        <th>L. Name</th>
-        <th>Task Title</th>
-        <th>E-mail</th>
-        <th>Task Priority</th>
-        <th>Due Date</th>
-        <th>To Do</th>
-    </tr>
-    </thead>
-    <tbody>
-<ng-container *ngFor="let list of list">
-    <tr>
-        <td>{{firstName }}</td>
-        <td>{{lastName}}</td>
-        <td>{{taskTitle}}</td>
-        <td>{{email}}</td>
-        <td>{{taskPriority}}</td>
-        <td>{{dueDate}}</td>
-        <td>{{toDo}}</td>
-    </tr>
-</ng-container>
-</table>
+        <br>
+        <div>
+            <label for="email">Email: </label>
+            <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Enter email address...">
+            <label for="taskPriority">Task Priority: </label>
+            <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
+            <label for="dueDate">Due Date: </label>
+            <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
+            </div>  
+            <br>
+        <div>
+            <label for="toDo">To Do: </label>
+            <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Yes or No...">
+        </div><br><br><br>
+        <div><button (click)="addTask(); taskCreationForm.reset()">Submit</button></div>
+        <div><button (click)="removeTask()">Remove Task</button></div>
+        <div><button (click)="addtaskTitleUsingModel">create new task</button></div>
+        </section>
+</article>
+
 </div>
 
+<div>
+    <ng-container *ngFor="let task of list; let i = index;">
+        <app-task [task]="task"
+                            (updateTaskTitleEvent)="updateTitle($event, i)"
+                            (updateTaskViaIdEvent)="updateTaskViaId($event)"></app-task>
+     </ng-container>
+     <app-fin-list></app-fin-list>
+</div>
+<section>
+    
+</section>
+</form>
+
+</main>
