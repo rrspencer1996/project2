@@ -1,5 +1,5 @@
 
-    <section id="tsection">
+    <section id="bg">
         <ul>
             <h3><strong>To Do!</strong></h3>
            <h5>First Name: {{ task.firstName }}</h5>
@@ -10,19 +10,19 @@
             <h5>Due Date:   {{ task.dueDate}}</h5>
             <h5>To Do:  {{ task.toDo}}</h5>
         </ul>
-        <div>
+        <!-- <form>
         <label for="newTitle">New Title</label>
         <input [(ngModel)]="newTitle" type="text" id="newTitle" name="newTitle" placeholder="Update Title">
         <button (click)="updateTitle()">New Title</button>
-        </div>
-        <div>
+        </form>
+        <form>
             <label for="newTaskViaId">New Title</label>
             <input [(ngModel)]="newTaskViaId" type="text" id="newTaskViaId" name="newTaskViaId" placeholder="Update Task">
             <button (click)="updateTaskViaId()">Udate task</button>
-            </div>
-<ng-container *ngFor="let tasker of TaskerList">
-<app-tasker [tasker]="tasker"></app-tasker>
-</ng-container>
+        </form> -->
+<!-- <ng-container *ngFor="let tasker of TaskerList">
+<app-tasker [tasker]="tasker"></app-tasker> -->
+<!-- </ng-container> -->
     </section>
 
 <!-- <section *ngif= "task.taskPriority === 'Urgent'" style="background-color: firebrick;"></section>

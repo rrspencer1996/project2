@@ -1,4 +1,4 @@
-#tsection {
+section {
     grid-row: span 2;
     background-color: rgb(128, 168, 206);
     border-radius: 8px;
@@ -15,7 +15,7 @@
     
 }
 
-#tsection ul li:first-of-type {
+section ul li:first-of-type {
     font-weight: bold;
     text-transform: uppercase;
 }

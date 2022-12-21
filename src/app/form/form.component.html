@@ -15,11 +15,11 @@
                 name="firstName" 
                 id="firstName" 
                 placeholder="Please enter First Name" 
-                #firstName>
-    <!-- <p class="invalid" *ngIf="newTask.firstName!.invalid && (newTask.firstName!.touched || newTask.firstName!.dirty)">
-        <span *ngIf ="newTask.firstName!.errors?.['required']">Input is required</span>
-        <span *ngIf ="newTask.firstName!.errors?.['minlength'] || newTask.firstName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
-    </p> -->
+                #firstName> <!--need to re add ngModel to the alias field-->
+    <!-- <p class="invalid" *ngIf="firstName!.invalid && (firstName!.touched || firstName!.dirty)">
+        <span *ngIf ="firstName!.errors?.['required']">Input is required</span>
+        <span *ngIf ="firstName!.errors?.['minlength'] || firstName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
+    </p>  -->
     </div>    
     <div>
         <label for="lastName">Last Name</label>

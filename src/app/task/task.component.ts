@@ -63,10 +63,10 @@ newTaskViaId: string = '';
 //}
 ngOnInit() {
   console.log("Task Component Initialized");
-  console.log(this.task.taskPriority);
+  console.log(this.task.taskTitle);
   const section = document.getElementById('bg');
   section!.id = this.task.id;
-  switch (this.task.element) {
+  switch (this.task.taskPriority) {
     case 'Urgent':
       section!.style.backgroundColor = 'red';
       break;
@@ -81,6 +81,7 @@ ngOnInit() {
       break;  
 }
 }
+// need to write logic for this to react to changed value!
 ngOnChanges(changes: SimpleChanges): void {
   console.log('Inside ngOnChanges method...');
   console.log(changes);
@@ -110,6 +111,7 @@ updateTask(): void {
 updateTitle(): void {
  this.updateTaskTitleEvent.emit(this.newTitle)
 }
+
 }
 
 // create a button and field inside each card and use them to update a field inside the card, to accomplish this we have to send data to the list component

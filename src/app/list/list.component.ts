@@ -96,6 +96,7 @@ export class ListComponent {
 addTask(): void {
   this.list.push(
       {
+        id: this.list.length + 1, 
         firstName: this.firstName,
         lastName: this.lastName,
         taskTitle: this.taskTitle,  
@@ -124,22 +125,22 @@ removeTask(): void {
   );
 }
 
-addtaskTitleUsingModel(): void {
-    //   // inside a function, so must use let/const
-    //   // type of the variable is the model itself -- Card
-    //   // then the new keyword and the constructor
-const newTask: Task = new Task(this.list.length + 1,
-this.firstName,
-this.lastName,
-this.taskTitle,
-this.email,
-this.taskPriority,
-this.dueDate,
-this.toDo)
+// addtaskTitleUsingModel(): void {
+//     //   // inside a function, so must use let/const
+//     //   // type of the variable is the model itself -- Card
+//     //   // then the new keyword and the constructor
+// const newTask: Task = new Task(this.list.length + 1,
+// this.firstName,
+// this.lastName,
+// this.taskTitle,
+// this.email,
+// this.taskPriority,
+// this.dueDate,
+// this.toDo)
 
 
-this.list.push(newTask);
-}
+// this.list.push(newTask);
+// }
   
 
     updateString(newString: string): void{
@@ -152,33 +153,71 @@ this.list.push(newTask);
  this.list[index].firstName = newfirstName;
  }
   
-    // // updating the card via ID
-// updateTaskViaId(newTask: any): void {
 
-// for (let task of this.list) {
 
-// if (task.id === newfirstName[1])
-
-// task.firstName = newfirstName[0];
-// }
-// }
   
-taskNumber: number = 0;
+taskId: number = 0;
+newfirstName: string = '';
+newlastName: string = '';
+newtaskTitle: string = '';
+newemail: string = '';
 newtaskPriority: string = '';
+newdueDate: string = '';
+newtoDo: string = '';
 
+// changetaskPriority() {
+// for (let task of this.list) {
+// if (task.id === this.taskNumber)
+// task.taskPriority = this.newtaskPriority;
+// }
 
-
-changetaskPriority() {
-for (let task of this.list) {
-if (task.id === this.taskNumber)
-task.taskPriority = this.newtaskPriority;
-}
-
+//   }
+// updateTaskViaId(newTask: any): void{
+//  for (let task of this.list) {
+//   if (task.id === newTask[1])
+//   task.taskTitle = newTask[0];
+//  }
+// }
+changefirstName(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.firstName = this.newfirstName;
   }
-updateTaskViaId(newTask: any): void{
- for (let task of this.list) {
-  if (task.id === newTask[1])
-  task.taskTitle = newTask[0];
- }
+}
+changelastName(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.lastName = this.newlastName;
+  }
+}
+changetaskTitle(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.taskTitle = this.newtaskTitle;
+  }
+}
+changeemail(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.email = this.newemail;
+  }
+}
+changetaskPriority(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.taskPriority = this.newtaskPriority;
+  }
+}
+changedueDate(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.dueDate = this.newdueDate;
+  }
+}
+changetoDo(){
+  for (let task of this.list){
+    if (task.id === this.taskId)
+    task.toDo = this.newtoDo;
+  }
 }
 }

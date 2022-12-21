@@ -21,31 +21,61 @@
             <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
             <label for="dueDate">Due Date: </label>
             <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
-            </div>  
-            <br>
+        </div>  
+        <br>
         <div>
             <label for="toDo">To Do: </label>
             <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Yes or No...">
-        </div><br><br><br>
-        <div><button (click)="addTask(); taskCreationForm.reset()">Submit</button></div>
-        <div><button (click)="removeTask()">Remove Task</button></div>
-        <div><button (click)="addtaskTitleUsingModel">create new task</button></div>
+        </div>
+            <br>
+            <div><button (click)="addTask(); taskCreationForm.reset()">Submit</button></div>
+            <div><button (click)="removeTask()">Remove Task</button></div>
+        
+        <form #taskfunctionForm>
+            <h3>Task functions</h3>
+            <label for="taskId"> Enter Task Id: </label>
+            <input [(ngModel)]="taskId" type="number" id="taskId" name="taskId"><br>
+
+            <label for="newfirstName">First Name: </label>
+            <input [(ngModel)]="newfirstName" type="text" id="newfirstName" name="newfirstName"  placeholder="Enter First Name...">
+            <button (click)="changefirstName(); taskfunctionForm.reset()">Commit</button>
+            <label for="newlastName">Last Name: </label>
+            <input [(ngModel)]="newlastName" type="text" id="newlastName" name="newlastName"  placeholder="Enter Last Name...">
+            <button (click)="changelastName(); taskfunctionForm.reset()">Commit</button>
+            <label for="newtaskTitle">Task Title: </label>
+            <input [(ngModel)]="newtaskTitle" type="text" id="newtaskTitle" name="newtaskTitle"  placeholder="Enter Task Title...">
+            <button (click)="changetaskTitle(); taskfunctionForm.reset()">Commit</button>
+            <label for="newemail">Email: </label>
+            <input [(ngModel)]="newemail" type="text" id="newemail" name="newemail"  placeholder="Enter email address...">
+            <button (click)="changeemail(); taskfunctionForm.reset()">Commit</button>
+            <label for="newtaskPriority">Task Priority: </label>
+            <input [(ngModel)]="newtaskPriority" type="text" id="newtaskPriority" name="newtaskPriority"  placeholder="Enter taskPriority...">
+            <button (click)="changetaskPriority(); taskfunctionForm.reset()">Commit</button>
+            <label for="newdueDate">Due Date: </label>
+            <input [(ngModel)]="newdueDate" type="text" id="newdueDate" name="newdueDate"  placeholder="Enter due date...">
+            <button (click)="changedueDate(); taskfunctionForm.reset()">Commit</button>
+            <label for="newtoDo">To Do: </label>
+            <input [(ngModel)]="newtoDo" type="text" id="newtoDo" name="newtoDo"  placeholder="Enter Yes or No...">
+            <button (click)="changetoDo(); taskfunctionForm.reset()">Commit</button>
+        </form>
+        <br><br><br>
+        
+        
+        
         </section>
 </article>
 
 </div>
-
+<br><br>
 <div>
     <ng-container *ngFor="let task of list; let i = index;">
         <app-task [task]="task"
-                            (updateTaskTitleEvent)="updateTitle($event, i)"
-                            (updateTaskViaIdEvent)="updateTaskViaId($event)"></app-task>
+                            (updateTaskTitleEvent)="updateTitle($event, i)"></app-task>
+                            <!-- (updateTaskViaIdEvent)="updateTaskViaId($event)"> -->
      </ng-container>
-     <app-fin-list></app-fin-list>
+
 </div>
-<section>
-    
-</section>
+
 </form>
 
 </main>

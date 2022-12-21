@@ -1,5 +1,5 @@
 
-    <section id=fsection>
+    <section>
 
         <ul>
             <h3><strong>Completed!</strong></h3>
@@ -11,8 +11,5 @@
             <h5>Due Date:   {{ fin_List.dueDate}}</h5>
             <h5>To Do:  {{ fin_List.toDo}}</h5>
         </ul>
-        <ng-container *ngFor="let tasker of fin_List">
-            <app-tasker [tasker]="tasker"></app-tasker>
-            </ng-container>
 
     </section>

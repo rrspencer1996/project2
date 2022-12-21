@@ -123,7 +123,7 @@ regformTest: any = {
 onSubmit(): void {
   this.task.push({...this.newTask});
   this.regformTest = this.registrationFormForm.value;
-console.log(this.newTask + 'created')
+
 
 }
 
