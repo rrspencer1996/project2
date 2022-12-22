@@ -30,8 +30,8 @@ newTask: string = '';
 newTitle: string = '';
 newTaskPriority: string = '';
 newTaskViaId: string = '';
-// this.updatePriorityEvent
-//}
+
+
 ngOnInit() {
   console.log("Task Component Initialized");
   console.log(this.task.taskTitle);
@@ -84,6 +84,3 @@ updateTitle(): void {
 }
 
 }
-
-// create a button and field inside each card and use them to update a field inside the card, to accomplish this we have to send data to the list component
-// we need a output and variable and a function
