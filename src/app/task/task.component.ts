@@ -16,37 +16,8 @@ export class TaskComponent implements OnInit, OnChanges {
 
 
 
-TaskerList: any = [
-//   {
-//     firstName: 'Rob1',
-//     lastName: 'Spencer',
-//     taskTitle: 'empty trash',
-//     email: 'rrspencer@live.com',
-//     taskPriority: 'High',
-//     dueDate: 'Today',
-//     toDo: 'Yes'
-//   },
-  
-//   {
-//   firstName: 'Joe1',
-//   lastName: 'Jackson',
-//   taskTitle: 'do dishes',
-//   email: 'abc123@email.com',
-//   taskPriority: 'Low',
-//   dueDate: 'Friday',
-//   toDo: 'Yes'
-//   },
-  
-//   {
-//     firstName: 'Warren1',
-//     lastName: 'Buffet',
-//     taskTitle: 'Make Money',
-//     email: 'gimmedalootz@money.com',
-//     taskPriority: 'Urgent',
-//     dueDate: 'ASAP',
-//     toDo: 'Yes'
-//   }
-];
+TaskerList: any = []
+
 
 
   @Input() task: any;

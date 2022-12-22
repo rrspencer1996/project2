@@ -12,9 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
-import { MastheadComponent } from './masthead/masthead.component';
 import { TaskerComponent } from './tasker/tasker.component';
-import { FinListComponent } from './fin-list/fin-list.component';
+import { FinListComponent } from './finList/finList.component';
 
 
 @NgModule({
@@ -29,7 +28,6 @@ import { FinListComponent } from './fin-list/fin-list.component';
     FormComponent,
     ListComponent,
     TaskComponent,
-    MastheadComponent,
     TaskerComponent,
     FinListComponent
  

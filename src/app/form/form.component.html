@@ -1,149 +1,88 @@
-<main>
-<form [formGroup]="registrationFormForm" class="registrationForm">
 
-    <h4>Descriptive Text here:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum corporis dolorem possimus atque dolor, sequi facere ipsam quae, at voluptates nihil quia amet quod in reprehenderit, mollitia dolorum maiores eligendi.</h4>
+<form #taskCreationForm>
+    <div id="div" >
+    
+    <article>
+        <section>
+            <div>
+                <h1>Utility Menu</h1>
+                <h3>Add Task!</h3>
+                <label for="firstName">F Name: </label>
+                <input [(ngModel)]="firstName" id="firstName" name="firstName" type="text" placeholder="Enter First Name...">
+                <label for="lastName">Last Name: </label>
+                <input [(ngModel)]="lastName" id="lastName" name="lastName" type="text" placeholder="Enter Last Name...">
+                <label for="taskTitle">Task Title: </label>
+                <input [(ngModel)]="taskTitle" id="taskTitle" name="taskTitle" type="text" placeholder="Enter Task Title...">
+            </div>
+            <br>
+            <div>
+                <label for="email">Email: </label>
+                <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Enter email address...">
+                <label for="taskPriority">Task Priority: </label>
+                <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
+                <label for="dueDate">Due Date: </label>
+                <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
+            </div>  
+            <br>
+            <div>
+                <label for="toDo">To Do: </label>
+                <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Yes or No...">
+            </div>
+                <br>
+                <div><button (click)="addTask(); taskCreationForm.reset()">Submit</button></div>
+                <div><button (click)="removeTask()">Remove Task</button></div> 
+            
+            <form #taskfunctionForm>
+                <h3>Task functions</h3>
+                <span><label for="taskId"> Enter Task Id: </label>
+                <input [(ngModel)]="taskId" type="number" id="taskId" name="taskId"><br>
+            <button (click)="returnTask()">Remove this task from Completed List?</button></span>
 
-        <H3>COMING SOON</H3>
-        <!-- BROKEN NEED TO FIX -->
-        <!-- <label for="task priority">task priority</label>
-            <input [(ngModel)]="newTask.priority"> -->
-        <div>
-        <label for="firstName">First Name</label>
-        <input [(ngModel)]="newTask.firstName" 
-                type="text" formControlName="firstName" 
-                class="formLabel" 
-                name="firstName" 
-                id="firstName" 
-                placeholder="Please enter First Name" 
-                #firstName> <!--need to re add ngModel to the alias field-->
-    <!-- <p class="invalid" *ngIf="firstName!.invalid && (firstName!.touched || firstName!.dirty)">
-        <span *ngIf ="firstName!.errors?.['required']">Input is required</span>
-        <span *ngIf ="firstName!.errors?.['minlength'] || firstName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
-    </p>  -->
-    </div>    
-    <div>
-        <label for="lastName">Last Name</label>
-        <input [(ngModel)]="newTask.lastName" 
-                type="text" 
-                class="formLabel" 
-                formControlName="lastName" 
-                name="lastName" 
-                id="lastName" 
-                placeholder="Please enter Last Name" 
-                #lastName>
-        <!-- <p class="invalid" *ngIf="lastName!.invalid && (lastName!.touched || lastName!.dirty)">
-            <span *ngIf ="lastName!.errors?.['required']">Input is required</span>
-            <span *ngIf ="lastName!.errors?.['minlength'] || lastName!.errors?.['maxlength']">First name must be between 3 and 20 characters</span>
-        </p> -->
-    </div>  
-    <div>
-        <label for="taskTitle">Task Title</label>
-        <input [(ngModel)]="newTask.taskTitle" 
-                type="text" 
-                formControlName="taskTitle" 
-                class="formLabel" 
-                name="taskTitle" 
-                id="taskTitle" 
-                placeholder="Please enter name of task" 
-                #taskTitle>
-    <!-- <p class="invalid" *ngIf="taskTitle!.invalid && (taskTitle!.touched || taskTitle!.dirty)">
-        <span *ngIf ="taskTitle!.errors?.['required']">Input is required</span>
-        <span *ngIf ="taskTitle!.errors?.['minlength'] || taskTitle!.errors?.['maxlength']">Title must be between 3 and 20 characters</span> -->
-    </div>    
-    <div>
-        <label for="email">Email</label>
-        <input [(ngModel)]="newTask.email" 
-                type="text" 
-                formControlName="email" 
-                class="formLabel" 
-                name="email" 
-                id="email" 
-                placeholder="Please enter email address" 
-                #email>
-    <!-- <p class="invalid" *ngIf="email!.invalid && (email!.touched || email!.dirty)">
-         <span *ngIf ="email.errors?.['required']">Input is required</span> -->
-    <!-- <span *ngIf ="email!.errors?.['minlength'] || email!.errors?.['maxlength']">Title must be between 3 and 20 characters</span> --> 
-    </div>    
-    <div>
-        <label for="taskPriority">Task Priority</label>
-        <input [(ngModel)]="newTask.taskPriority" 
-                type="text" 
-                formControlName="taskPriority" 
-                class="formLabel" 
-                name="taskPriority" 
-                id="taskPriority" 
-                placeholder="Please enter priority of task" 
-                #taskPriority>
-    <!-- <p class="invalid" *ngIf="taskPriority!.invalid && (taskPriority!.touched || taskPriority!.dirty)">
-        <span *ngIf ="taskPriority!.errors?.['required']">Input is required</span>
-        <span *ngIf ="taskPriority!.errors?.['minlength'] || taskPriority!.errors?.['maxlength']">Title must be between 3 and 20 characters</span> -->
+                <br><br>
+                <label for="newfirstName">First Name: </label>
+                <input [(ngModel)]="newfirstName" type="text" id="newfirstName" name="newfirstName"  placeholder="Enter First Name...">
+                <button (click)="changefirstName(); taskfunctionForm.reset()">Commit</button>
+                <label for="newlastName">Last Name: </label>
+                <input [(ngModel)]="newlastName" type="text" id="newlastName" name="newlastName"  placeholder="Enter Last Name...">
+                <button (click)="changelastName(); taskfunctionForm.reset()">Commit</button>
+                <br>
+                <label for="newtaskTitle">Task Title: </label>
+                <input [(ngModel)]="newtaskTitle" type="text" id="newtaskTitle" name="newtaskTitle"  placeholder="Enter Task Title...">
+                <button (click)="changetaskTitle(); taskfunctionForm.reset()">Commit</button>
+                <label for="newemail">Email: </label>
+                <input [(ngModel)]="newemail" type="text" id="newemail" name="newemail"  placeholder="Enter email address...">
+                <button (click)="changeemail(); taskfunctionForm.reset()">Commit</button>
+                <br>
+                <label for="newtaskPriority">Task Priority: </label>
+                <input [(ngModel)]="newtaskPriority" type="text" id="newtaskPriority" name="newtaskPriority"  placeholder="Enter taskPriority...">
+                <button (click)="changetaskPriority(); taskfunctionForm.reset()">Commit</button>
+                <label for="newdueDate">Due Date: </label>
+                <input [(ngModel)]="newdueDate" type="text" id="newdueDate" name="newdueDate"  placeholder="Enter due date...">
+                <button (click)="changedueDate(); taskfunctionForm.reset()">Commit</button>
+                <br>
+                <label for="newtoDo">To Do: </label>
+                <input [(ngModel)]="newtoDo" type="text" id="newtoDo" name="newtoDo"  placeholder="Enter Yes or No...">
+                <button (click)="changetoDo(); taskfunctionForm.reset()">Commit</button>
+            </form>
+            <br><br><br>
+            
+            
+            
+            </section>
+    </article>
+    
     </div>
+    <br><br>
     <div>
-        <label for="dueDate">Task Due Date</label>
-        <input [(ngModel)]="newTask.dueDate" 
-                type="text" 
-                formControlName="dueDate" 
-                class="formLabel" 
-                name="dueDate" 
-                id="dueDate" 
-                placeholder="Please enter due date" 
-                #dueDate>
-    <!-- <p class="invalid" *ngIf="dueDate!.invalid && (dueDate!.touched || dueDate!.dirty)">
-        <span *ngIf ="dueDate!.errors?.['required']">Input is required</span>
-        <span *ngIf ="dueDate!.errors?.['minlength'] || dueDate!.errors?.['maxlength']">Title must be between 3 and 20 characters</span> -->
+        <ng-container *ngFor="let task of serviceFList; let i = index;">
+            <app-task [task]="task"></app-task>
+                                <!-- (updateTaskTitleEvent)="updateTitle($event, i)" -->
+                                <!-- (updateTaskViaIdEvent)="updateTaskViaId($event)"> -->
+         </ng-container>
+    
     </div>
-    <div>
-        <label for="toDo">To Do</label>
-        <input [(ngModel)]="newTask.toDo" 
-                type="text" 
-                formControlName="todo" 
-                class="formLabel" 
-                name="todo" 
-                id="todo" 
-                placeholder="Add task to todo" 
-                #toDo>
-    <!-- <p class="invalid" *ngIf="todo!.invalid && (todo!.touched || todo!.dirty)">
-        <span *ngIf ="todo!.errors?.['required']">Input is required</span>
-        <span *ngIf ="todo!.errors?.['minlength'] || todo!.errors?.['maxlength']">Title must be between 3 and 20 characters</span> -->
-    </div>
-        <br><br><br><button type="submit" (click)="onSubmit()" [disabled]="registrationFormForm.invalid" class="submitButton">REGISTER</button>
-    <div>
-        <h3>Data From Form</h3>
-        <p>First Name: {{ regformTest.firstName }}</p>
-        <p>Last Name: {{ regformTest.lastName }}</p>
-        <p>E-Mail: {{ regformTest.email }}</p>
-        <p>Password: {{ regformTest.taskTitle }}</p>
-        <p>Confirm Password: {{ regformTest.taskPriority}}</p>
-    </div>
-    <div>
-        
-    </div>
-    <br><br><br><br>
-    <table>
-    <thead>
-        <tr>
-            <th>firstName</th>
-            <th>lastName</th>
-            <th>taskTitle</th>
-            <th>email</th>
-            <th>taskPriority</th>
-            <th>dueDate</th>
-            <th>toDo</th>
-        </tr>
-    </thead>
-    <tbody>
-    <ng-container *ngFor="let task of task">
-        <tr>
-            <td>{{task.firstName}}</td>
-            <td>{{task.lastName}}</td>
-            <td>{{task.taskTitle}}</td>
-            <td>{{task.email}}</td>
-            <td>{{task.taskPriority}}</td>
-            <td>{{task.dueDate}}</td>
-            <td>{{task.toDo}}</td>
-        </tr>
-    </ng-container></tbody>
-    </table>
-</form>
+    
+    </form>
 
-</main>
+
+

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FinListComponent } from './fin-list.component';
+import { FinListComponent } from './finList.component';
 
 describe('FinListComponent', () => {
   let component: FinListComponent;
