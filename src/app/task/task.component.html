@@ -1,19 +1,15 @@
-
     <section id="bg" class="section1">
         <ul>
-            <h3><strong>To Do!</strong></h3>
-           <h5>First Name: {{ task.firstName }}</h5>
+            <h3><strong>To Do:  {{ task.toDo}} </strong></h3>
+            <br>
+            <h5>First Name: {{ task.firstName }}</h5>
             <h5>Last Name:  {{ task.lastName }}</h5>
             <h5>Task Title: {{ task.taskTitle }}</h5>
-            <h5>Email:   {{ task.email }}</h5>
-            <h5>Task Priority:   {{ task.taskPriority }}</h5>
-            <h5>Due Date:   {{ task.dueDate}}</h5>
-            <h5>To Do:  {{ task.toDo}}</h5>
-        </ul>
-       
-    </section>
+            <h5>Email: {{ task.email }}</h5>
+            <h5>Task Priority: {{ task.taskPriority }}</h5>
+            <h5>Due Date: {{ task.dueDate}}</h5>
 
-<!-- <section *ngif= "task.taskPriority === 'Urgent'" style="background-color: firebrick;"></section>
-<section *ngif= "task.taskPriority === 'High'" style="background-color:orange;"></section>
-<section *ngif= "task.taskPriority === 'Routine'" style="background-color:lightseagreen"></section>
-<section *ngif= "task.taskPriority === 'Low'" style="background-color:lightskyblue"></section> -->
+        </ul>
+
+
+

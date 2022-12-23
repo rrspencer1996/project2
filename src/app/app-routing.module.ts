@@ -4,7 +4,7 @@ import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { TaskComponent } from './task/task.component';
-import { FinListComponent } from './finList/finList.component';
+
 
 const routes: Routes = [
 {path: '',
@@ -26,10 +26,7 @@ component:ListComponent
   path: 'task',
   component:TaskComponent
 },
-{
-  path: 'finList',
-  component:FinListComponent
-}
+
 
 ];
 

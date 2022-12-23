@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Task } from 'src/app/Models/task';
+
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class MoverService {
-  id: string = '';
+  id: number = 0;
   firstName: string = '';
   lastName: string ='';
   taskTitle: string ='';
@@ -28,157 +28,151 @@ this.toDo
 
 list: any = [
   {
-    id: '10',
+    id: 1,
     firstName: 'Rob',
     lastName: 'Spencer',
     taskTitle: 'empty trash',
     email: 'rrspencer@live.com',
     taskPriority: 'High',
     dueDate: 'Today',
-    toDo: 'Yes'
+    toDo: 'Open'
 },
 {
-  id: '20',
+  id: 2,
   firstName: 'Mr',
   lastName: 'Rogers',
   taskTitle: 'Thinking Happy Thoughts',
   email: 'changin@shoes.com',
-  taskPriority: 'Low',
+  taskPriority: 'Routine',
   dueDate: 'Friday',
-  toDo: 'Yes'
+  toDo: 'Open'
 },
   {
-    id: '30',
+    id: 3,
     firstName: 'Ninja',
     lastName: 'Turtle',
     taskTitle: 'Making pizza in a sewer',
     email: 'cowabunga@dude.com',
     taskPriority: 'Urgent',
     dueDate: 'ASAP',
-    toDo: 'Yes'
+    toDo: 'Open'
 },
 {
-  id: '40',
+  id: 4,
   firstName: 'Prince',
   lastName: '',
   taskTitle: 'Hit all the high notes',
   email: 'purplerain@forlife.com',
   taskPriority: 'High',
   dueDate: 'Next Monday',
-  toDo: 'No'
+  toDo: 'Open'
 },
 {
-  id: '50',
+  id: 5,
   firstName: 'Douglas',
   lastName: 'Adams',
   taskTitle: 'Explore a new place',
   email: 'fortytwo@answer.com',
   taskPriority: 'Low',
   dueDate: 'Thursday',
-  toDo: 'No'
+  toDo: 'Open'
 },
 {
-  id: '60',
+  id: 6,
   firstName: 'Luke',
   lastName: 'Skywalker',
   taskTitle: 'Buy Lightsaber batteries',
   email: 'usetheforce@luke.com',
-  taskPriority: 'High',
+  taskPriority: 'Routine',
   dueDate: 'Tommorrow',
-  toDo: 'Yes'
+  toDo: 'Open'
 },
 {
-  id: '70',
+  id: 7,
 firstName: 'Big',
 lastName: 'Bird',
 taskTitle: 'Give directions to Sesame St.',
 email: 'ABC123@PBS.org',
-taskPriority: 'High',
+taskPriority: 'Urgent',
 dueDate: 'Today',
-toDo: 'Yes'
+toDo: 'Open'
 }
 ]
-  // this.id = 1,
-  // this.firstName = '',
-  // this.lastName = '',
-  // this.taskTitle = '',
-  // this.email = '', 
-  // this.dueDate = '',
-  // this.toDo ='',
+
 
 
 
 
 finList: any = [
   {
-    id:'1',
+    id: 1,
     firstName: 'Lamar',
     lastName: 'Bland',
     taskTitle: 'walk dog',
     email: 'lbland123@skillstorm.com',
-    taskPriority: 'Low',
+    taskPriority: 'Urgent',
     dueDate: 'Wednesday',
-    toDo: 'Yes'
+    toDo: 'Complete'
 },
 {
-  id:'2',
+  id: 2,
   firstName: 'Joe',
   lastName: 'Jackson',
   taskTitle: 'do dishes',
   email: 'abc123@email.com',
   taskPriority: 'Low',
   dueDate: 'Friday',
-  toDo: 'Yes'
+  toDo: 'Complete'
 },
   {
-    id:'3',
+    id: 3,
     firstName: 'Warren',
     lastName: 'Buffet',
     taskTitle: 'Make Money',
     email: 'gimmedalootz@money.com',
     taskPriority: 'Urgent',
-    dueDate: 'ASAP',
-    toDo: 'Yes'
+    dueDate: 'Routine',
+    toDo: 'Complete'
 },
 {
-  id:'4',
+  id: 4,
   firstName: 'UmyBoi',
   lastName: 'Blue',
   taskTitle: 'clean bathroom',
   email: 'imgonnalive@life.com',
   taskPriority: 'High',
   dueDate: 'Next Monday',
-  toDo: 'No'
+  toDo: 'Complete'
 },
 {
-  id:'5',
+  id: 5,
   firstName: 'The Dude',
   lastName: 'Lebowski',
   taskTitle: 'Practice Bowling',
   email: 'theDude@Abides.com',
   taskPriority: 'Low',
   dueDate: 'Thursday',
-  toDo: 'No'
+  toDo: 'Complete'
 },
 {
-  id:'6',
+  id: 6,
   firstName: 'Peter',
   lastName: 'Parker',
   taskTitle: 'fight evil',
   email: 'therealspiderman@webslinger.com',
-  taskPriority: 'High',
+  taskPriority: 'Routine',
   dueDate: 'Tommorrow',
-  toDo: 'Yes'
+  toDo: 'Complete'
 },
 {
-  id:'7',
+  id: 7,
 firstName: 'Chadwick',
 lastName: 'Boseman',
 taskTitle: 'protect vibranium',
 email: 'wakanda@forever.com',
 taskPriority: 'High',
 dueDate: 'Today',
-toDo: 'Yes'
+toDo: 'Complete'
 }
 ];
 lookUpById: string = '';

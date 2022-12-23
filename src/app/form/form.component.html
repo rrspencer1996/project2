@@ -4,73 +4,73 @@
         <h1>Utility Menu</h1>
             <div id="divIn">
                 <h3>Add Task!</h3>
-                <label for="firstName">F Name: </label>
-                <input [(ngModel)]="firstName" id="firstName" name="firstName" type="text" placeholder="Enter First Name...">
-                <label for="lastName">Last Name: </label>
-                <input [(ngModel)]="lastName" id="lastName" name="lastName" type="text" placeholder="Enter Last Name...">
-                <label for="taskTitle">Task Title: </label>
-                <input [(ngModel)]="taskTitle" id="taskTitle" name="taskTitle" type="text" placeholder="Enter Task Title...">
+                    <label for="firstName">First Name: </label>
+                        <input [(ngModel)]="firstName" id="firstName" name="firstName" type="text" placeholder="Enter First Name...">
+                    <label for="lastName">Last Name: </label>
+                        <input [(ngModel)]="lastName" id="lastName" name="lastName" type="text" placeholder="Enter Last Name...">
+                    <label for="taskTitle">Task Title: </label>
+                        <input [(ngModel)]="taskTitle" id="taskTitle" name="taskTitle" type="text" placeholder="Enter Task Title...">
             </div>
                 <br>
             <div id="divIn">
-                <label for="email">Email: </label>
-                <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Enter email address...">
-                <label for="taskPriority">Task Priority: </label>
-                <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
-                <label for="dueDate">Due Date: </label>
-                <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
+                    <label for="email">Email: </label>
+                        <input [(ngModel)]="email" id="email" name="email" type="text" placeholder="Enter email address...">
+                    <label for="taskPriority">Task Priority: </label>
+                        <input [(ngModel)]="taskPriority" id="taskPriority" name="taskPriority" type="text" placeholder="Enter taskPriority...">
+                    <label for="dueDate">Due Date: </label>
+                        <input [(ngModel)]="dueDate" id="dueDate" name="dueDate" type="text" placeholder="Enter due date...">
             </div>  
                 <br>
             <div id="divIn">
-                <label for="toDo">To Do: </label>
-                <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Yes or No...">
+                    <label for="toDo">To Do: </label>
+                        <input [(ngModel)]="toDo" id="toDo" name="toDo" type="text" placeholder="Enter Complete or Open">
             </div>
                 <br>
                     <ul>
-                        <li><button (click)="addTask(); taskCreationForm.reset()">Submit</button></li>
-                        <li><button (click)="removeTask()">Remove Task</button></li> 
-                        <li><button (click)="returnTask()">Remove this task from Completed List?</button></li>
+                        <li><button id="btn" (click)="addTask(); taskCreationForm.reset()">Submit</button></li>
+                        <li><button id="btn" (click)="removeTask()">Remove Task</button></li> 
+                        <li><button id="btn" (click)="returnTask()">Remove this task from Completed List?</button></li>
                     </ul>
 
             <form #taskfunctionForm>
                 <h3>Task functions</h3>
             <div id="divIn">
-                <label for="taskId"> Enter Task Id: </label>
-                <input [(ngModel)]="taskId" type="number" id="taskId" name="taskId">
+                    <label for="taskId"> Enter Task Id: </label>
+                        <input [(ngModel)]="taskId" type="number" id="taskId" name="taskId">
 
             </div>    
                 <br>
             <div id="divIn">
-                <label for="newfirstName">First Name: </label>
-                <input [(ngModel)]="newfirstName" type="text" id="newfirstName" name="newfirstName"  placeholder="Enter First Name...">
-                <button (click)="changefirstName(); taskfunctionForm.reset()">Commit</button>
-                <label for="newlastName">Last Name: </label>
-                <input [(ngModel)]="newlastName" type="text" id="newlastName" name="newlastName"  placeholder="Enter Last Name...">
-                <button (click)="changelastName(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newfirstName">First Name: </label>
+                        <input [(ngModel)]="newfirstName" type="text" id="newfirstName" name="newfirstName"  placeholder="Enter First Name...">
+                            <button id="btn" (click)="changefirstName(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newlastName">Last Name: </label>
+                        <input [(ngModel)]="newlastName" type="text" id="newlastName" name="newlastName"  placeholder="Enter Last Name...">
+                            <button id="btn" (click)="changelastName(); taskfunctionForm.reset()">Commit</button>
             </div>     
             <br>
             <div id="divIn">
-                <label for="newtaskTitle">Task Title: </label>
-                <input [(ngModel)]="newtaskTitle" type="text" id="newtaskTitle" name="newtaskTitle"  placeholder="Enter Task Title...">
-                <button (click)="changetaskTitle(); taskfunctionForm.reset()">Commit</button>
-                <label for="newemail">Email: </label>
-                <input [(ngModel)]="newemail" type="text" id="newemail" name="newemail"  placeholder="Enter email address...">
-                <button (click)="changeemail(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newtaskTitle">Task Title: </label>
+                        <input [(ngModel)]="newtaskTitle" type="text" id="newtaskTitle" name="newtaskTitle"  placeholder="Enter Task Title...">
+                            <button id="btn" (click)="changetaskTitle(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newemail">Email: </label>
+                        <input [(ngModel)]="newemail" type="text" id="newemail" name="newemail"  placeholder="Enter email address...">
+                            <button id="btn" (click)="changeemail(); taskfunctionForm.reset()">Commit</button>
             </div>    
                 <br>
             <div id="divIn">    
-                <label for="newtaskPriority">Task Priority: </label>
-                <input [(ngModel)]="newtaskPriority" type="text" id="newtaskPriority" name="newtaskPriority"  placeholder="Enter taskPriority...">
-                <button (click)="changetaskPriority(); taskfunctionForm.reset()">Commit</button>
-                <label for="newdueDate">Due Date: </label>
-                <input [(ngModel)]="newdueDate" type="text" id="newdueDate" name="newdueDate"  placeholder="Enter due date...">
-                <button (click)="changedueDate(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newtaskPriority">Task Priority: </label>
+                        <input [(ngModel)]="newtaskPriority" type="text" id="newtaskPriority" name="newtaskPriority"  placeholder="Enter taskPriority...">
+                            <button id="btn" (click)="changetaskPriority(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newdueDate">Due Date: </label>
+                        <input [(ngModel)]="newdueDate" type="text" id="newdueDate" name="newdueDate"  placeholder="Enter due date...">
+                            <button id="btn" (click)="changedueDate(); taskfunctionForm.reset()">Commit</button>
             </div>    
             <div id="divIn"> 
                 <br>     
-                <label for="newtoDo">To Do: </label>
-                <input [(ngModel)]="newtoDo" type="text" id="newtoDo" name="newtoDo"  placeholder="Enter Yes or No...">
-                <button (click)="changetoDo(); taskfunctionForm.reset()">Commit</button>
+                    <label for="newtoDo">To Do: </label>
+                        <input [(ngModel)]="newtoDo" type="text" id="newtoDo" name="newtoDo"  placeholder="Enter Yes or No...">
+                            <button id="btn" (click)="changetoDo(); taskfunctionForm.reset()">Commit</button>
             </div>    
             </form>
             <br><br><br>

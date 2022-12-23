@@ -9,15 +9,14 @@ section {
 h4{
     margin-bottom: .5em;
     margin-left: 20px;
-    
-}
+    }
 
 p {
     margin-bottom: 1em;
 }
-
-styledimg{
-    background-image: url ("C:\Users\lamar\OneDrive\Desktop\Todo_Laptop_img.jpg");
-    width: 10px;
-    height: 20px;
+img{
+    display: flex;
+    align-content: center;
+    padding-left: 14em;
+    padding-top: 20px;
 }

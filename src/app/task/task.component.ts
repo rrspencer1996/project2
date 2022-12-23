@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
+Router
 
 @Component({
   selector: 'app-task',
@@ -52,7 +54,7 @@ ngOnInit() {
       break;  
 }
 }
-// need to write logic for this to react to changed value!
+
 ngOnChanges(changes: SimpleChanges): void {
   console.log('Inside ngOnChanges method...');
   console.log(changes);
