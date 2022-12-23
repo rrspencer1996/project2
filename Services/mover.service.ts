@@ -6,7 +6,7 @@ import { Task } from 'src/app/Models/task';
 })
 
 export class MoverService {
-  id: number = 0;
+  id: string = '';
   firstName: string = '';
   lastName: string ='';
   taskTitle: string ='';
@@ -28,7 +28,7 @@ this.toDo
 
 list: any = [
   {
-    id: 1,
+    id: '10',
     firstName: 'Rob',
     lastName: 'Spencer',
     taskTitle: 'empty trash',
@@ -38,7 +38,7 @@ list: any = [
     toDo: 'Yes'
 },
 {
-  id: 2,
+  id: '20',
   firstName: 'Mr',
   lastName: 'Rogers',
   taskTitle: 'Thinking Happy Thoughts',
@@ -48,7 +48,7 @@ list: any = [
   toDo: 'Yes'
 },
   {
-    id: 3,
+    id: '30',
     firstName: 'Ninja',
     lastName: 'Turtle',
     taskTitle: 'Making pizza in a sewer',
@@ -58,7 +58,7 @@ list: any = [
     toDo: 'Yes'
 },
 {
-  id: 4,
+  id: '40',
   firstName: 'Prince',
   lastName: '',
   taskTitle: 'Hit all the high notes',
@@ -68,7 +68,7 @@ list: any = [
   toDo: 'No'
 },
 {
-  id: 5,
+  id: '50',
   firstName: 'Douglas',
   lastName: 'Adams',
   taskTitle: 'Explore a new place',
@@ -78,7 +78,7 @@ list: any = [
   toDo: 'No'
 },
 {
-  id: 6,
+  id: '60',
   firstName: 'Luke',
   lastName: 'Skywalker',
   taskTitle: 'Buy Lightsaber batteries',
@@ -88,7 +88,7 @@ list: any = [
   toDo: 'Yes'
 },
 {
-  id: 7,
+  id: '70',
 firstName: 'Big',
 lastName: 'Bird',
 taskTitle: 'Give directions to Sesame St.',
@@ -111,7 +111,7 @@ toDo: 'Yes'
 
 finList: any = [
   {
-    id:1,
+    id:'1',
     firstName: 'Lamar',
     lastName: 'Bland',
     taskTitle: 'walk dog',
@@ -121,7 +121,7 @@ finList: any = [
     toDo: 'Yes'
 },
 {
-  id:2,
+  id:'2',
   firstName: 'Joe',
   lastName: 'Jackson',
   taskTitle: 'do dishes',
@@ -131,7 +131,7 @@ finList: any = [
   toDo: 'Yes'
 },
   {
-    id:3,
+    id:'3',
     firstName: 'Warren',
     lastName: 'Buffet',
     taskTitle: 'Make Money',
@@ -141,7 +141,7 @@ finList: any = [
     toDo: 'Yes'
 },
 {
-  id:4,
+  id:'4',
   firstName: 'UmyBoi',
   lastName: 'Blue',
   taskTitle: 'clean bathroom',
@@ -151,7 +151,7 @@ finList: any = [
   toDo: 'No'
 },
 {
-  id:5,
+  id:'5',
   firstName: 'The Dude',
   lastName: 'Lebowski',
   taskTitle: 'Practice Bowling',
@@ -161,7 +161,7 @@ finList: any = [
   toDo: 'No'
 },
 {
-  id:6,
+  id:'6',
   firstName: 'Peter',
   lastName: 'Parker',
   taskTitle: 'fight evil',
@@ -171,7 +171,7 @@ finList: any = [
   toDo: 'Yes'
 },
 {
-  id:7,
+  id:'7',
 firstName: 'Chadwick',
 lastName: 'Boseman',
 taskTitle: 'protect vibranium',
@@ -192,10 +192,9 @@ returnTask(id:string){
   }
 }
 completeTask(id:string){
-  console.log(id)
+  console.log(id + "TASKIDPASSEDIN")
   for(let task in this.list){
-    if(id===this.list[task].taskId){
-      // console.log("found it!!")
+    if(id==this.list[task].taskId){
       this.finList.push(this.list[task]);
         this.list.splice(task,1);}
   }

@@ -1,5 +1,5 @@
 section {
-    display: inline-block;
+    
     grid-row: span 2;
     background-color: rgb(128, 168, 206);
     border-radius: 8px;
@@ -14,6 +14,9 @@ section {
     display:grid;
     position: right;
     
+}
+.section1 {
+    display: inline-block;
 }
 
 section ul li:first-of-type {

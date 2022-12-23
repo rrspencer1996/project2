@@ -23,7 +23,7 @@ serviceList: any = this.moverService.list;
   dueDate: string = '';
   toDo: string = '';
 
-  taskId: number = 0;
+taskId: string = '0';
 newfirstName: string = '';
 newlastName: string = '';
 newtaskTitle: string = '';
@@ -41,7 +41,7 @@ completeTask(){
 addTask(): void {
   this.moverService.list.push(
       {
-        id:  this.moverService.list.length + 1, 
+        id:  (this.moverService.list.length + 1).toString(), 
         firstName: this.firstName,
         lastName: this.lastName,
         taskTitle: this.taskTitle,  

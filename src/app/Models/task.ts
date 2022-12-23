@@ -1,6 +1,6 @@
 export class Task {
 
-    id: number;
+    id: string;
     firstName: string;
     lastName: string;
     taskTitle: string;
@@ -9,7 +9,7 @@ export class Task {
     dueDate: string;
     toDo: string;
 
-    constructor(id: number, firstName: string, lastName: string, taskTitle: string, email: string, taskPriority: string, dueDate: string, toDo: string) {
+    constructor(id: string, firstName: string, lastName: string, taskTitle: string, email: string, taskPriority: string, dueDate: string, toDo: string) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
